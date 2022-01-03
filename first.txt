@@ -24,7 +24,9 @@ git : just shows about git and all he command to be used by it.
 git init : initializes the git to the current project folder and all the files into that folder is tracked.
 git config --global user.name"Faiyaz"
 git config --global user.email"faiyaz.dmak@gmail.com" : this above two commands is used to give your identity to git.
-Global means git software stores the info for all projects without entering every time. 
+ Global means git software stores the info for all projects without entering every time. 
+git config user.name : shows name of user.
+git config user.email : shows email of user.
 
 commands to work on--
 git init : makes the current folder as git tracking directory i.e any changes in that folder will be tracked.
