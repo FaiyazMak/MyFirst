@@ -1,0 +1,50 @@
+Thi is my first tutorial with git 
+and so this is my first version.
+
+some linux commands:
+pwd : present working directory of our terminal...it shows the folder into which we are executing the commands presently.
+ls : list show ...shows all the files and folder of present working directory.
+cd : change directory...we can shift our terminal to any folder by using this...basically cahnges pwd of terminal.
+rm -rf : it is command used to delete particular folders and files.rm -rf : it is command used to delete particular folders and files.
+rm -rf .git : deleats the .git folder and thus deletes all the tracking of the project folder. i.e delets the present git directory.
+ls -la : shows all the folders of our git directory.
+
+git 
+it is distributed version controlling system, which can tract all the changes made to developing project where u can also rollback 
+to previous versions.
+
+git as three stage architecture:
+working directory : the current working files of all the versions.
+staging area : files are send to staging area which are to be commited.
+git directory/repository : all the versions of the project which is created after each commit are stored in this directory. 
+ .git is that hidden git directory of the version controlling folder.
+
+git starting commands:
+git : just shows about git and all he command to be used by it.
+git init : initializes the git to the current project folder and all the files into that folder is tracked.
+git config --global user.name"Faiyaz"
+git config --global user.email"faiyaz.dmak@gmail.com" : this above two commands is used to give your identity to git.
+Global means git software stores the info for all projects without entering every time. 
+
+commands to work on--
+git init : makes the current folder as git tracking directory i.e any changes in that folder will be tracked.
+git status : shows how many files are not tracked uptodate..which files has been modified , which files has been send to staging area. 
+ and in general how changes are uptotime.
+git add --a : adds all the files to the staging area, to be commited.
+git add anynameoffile : adds particular file to staging area.
+git commit --m "anymessage" : commits the changes and saves it along with message.
+git log : show all the versions of the folder uptodate.
+
+git clone ParticularUrl : this clones particular repository from git hub into out local computer into provided folder i.e we can track that 
+ particular code from git hub into our computer and can use it as our git repositiory.
+git clone ParticularUrl . : this clones the git hub repository into the current open folder of our computer and not makes folder to clone it inside 
+ that folder.
+
+commands to ignore files in git:
+touch filename : this creates files/folders in the repository folder i.e in the working folder
+touch .gitignore : this creates a file in the working directory with name .gitignore ...
+ create this file and write names of folders and files which u want to be ignored by git ...that simple.
+git rm --cached filename : if particular file was tracked before and now u add it in .gitignore then that file will be not tracked from hereon but its history is 
+ not removed from git depository...if it has history which takes lots of space then that causes problem ..so this commands deletes the history of that 
+ file being added in .gitignore.
+
