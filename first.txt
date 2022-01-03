@@ -43,7 +43,7 @@ git clone ParticularUrl . : this clones the git hub repository into the current 
 commands to ignore files in git:
 touch filename : this creates files/folders in the repository folder i.e in the working folder
 touch .gitignore : this creates a file in the working directory with name .gitignore ...
- create this file and write names of folders and files which u want to be ignored by git ...that simple.
+ create this file and write names of folders and files which u want to be ignored by git ...that simple. see eg .gitignore of current directory.
 git rm --cached filename : if particular file was tracked before and now u add it in .gitignore then that file will be not tracked from hereon but its history is 
  not removed from git depository...if it has history which takes lots of space then that causes problem ..so this commands deletes the history of that 
  file being added in .gitignore.
