@@ -76,3 +76,5 @@ untracking the tracked file:
 git rm --cached fileName: removes caches..i.e deletes the tracking history of that file from git repository and make it untracked
 	...but this thing when made git status...will show that this file is untracked.
 	so if want to not show it put this file in .gitignore file to ignore it as well.
+	And when a file was tracked till date and put it in .gitignore and made changes in that file then still that file will show modified in git status as it was tracked earlier...
+	so in this case it has to be made git rm --cached fileName to untrack it as well.
