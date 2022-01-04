@@ -70,10 +70,9 @@ git commit -a -m "anyMessage" : skips the stagging area...i,e u can simply commi
 simply u can rename a file in working directory by right click but it will show old name file as file deleted and renamed file as untracked file when made git status and 
 	has to add it to staging area to tell git that it is renamed...but at the end it will be renamed in git repository as well. Another way to do to avoid git add step is as below..
 git mv fileNmae newNameforfile : renames the file from working directory and directly stages the remaned file with its history...mv is linux command meaning move.
-git rm fileNmae : deletes the file from working directory ....rm is remove.
+git rm fileNmae : deletes the file from working directory ....rm means remove.
 
 untracking the tracked file:
-git rm --cached : removes caches..i.e deletes the tracking history of that file from git repository and make it untracked
+git rm --cached fileName: removes caches..i.e deletes the tracking history of that file from git repository and make it untracked
 	...but this thing when made git status...will show that this file is untracked.
 	so if want to not show it put this file in .gitignore file to ignore it as well.
-
