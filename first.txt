@@ -1,5 +1,6 @@
 Thi is my first tutorial with git 
 and so this is my first version.
+soo excited!
 
 ****some linux commands:
 pwd : present working directory of our terminal...it shows the folder into which we are executing the commands presently.
