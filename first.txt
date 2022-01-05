@@ -105,6 +105,10 @@ git commit --amend : After this one editor will be opened which contains info ab
 	All the new changes/modifications which were made and staged after previous commit will alos be added to previous commit and 
 	a single commit is made includes changes from previous commit and recent changes.
 
-
-
+unstaging and unmodifying:
+git restore --staged fileName : when a file is staged it can be unstaged or can be send to modified by this command. i.e basically this command unstages the file.
+git checkout -- fileName : when a file is modified after a commit then u can unmodify that file and make it as it was in previous commit by this command.
+git checkout -- .gitignore : .gitignore does not get efficted by this ....thats the safety we get ...just wrote it to know the thing.
+git checkout -f : All the files modified will be unmodified and make it as it was in the previous commit...
+	This is dangerous because all the changes to the files made will be deleted if run this command. 
 
