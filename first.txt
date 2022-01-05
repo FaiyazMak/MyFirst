@@ -68,7 +68,8 @@ git commit -a -m "anyMessage" : skips the stagging area...i,e u can simply commi
 
 ****Renaming, deleting files from working directory:
 simply u can rename a file in working directory by right click but it will show old name file as file deleted and renamed file as untracked file when made git status and 
-	has to add it to staging area to tell git that it is renamed...but at the end it will be renamed in git repository as well. Another way to do to avoid git add step is as below..
+	has to add it to staging area to tell git that it is renamed...but at the end it will be renamed in git repository as well.
+	Another way to do to avoid git add step is as below..
 git mv fileNmae newNameforfile : renames the file from working directory and directly stages the remaned file with its history...mv is linux command meaning move.
 git rm fileNmae : deletes the file from working directory ....rm means remove.
 
@@ -76,5 +77,34 @@ untracking the tracked file:
 git rm --cached fileName: removes caches..i.e deletes the tracking history of that file from git repository and make it untracked
 	...but this thing when made git status...will show that this file is untracked.
 	so if want to not show it put this file in .gitignore file to ignore it as well.
-	And when a file was tracked till date and put it in .gitignore and made changes in that file then still that file will show modified in git status as it was tracked earlier...
+	And when a file was tracked till date and put it in .gitignore and made changes in that file then 
+	still that file will show modified in git status as it was tracked earlier...
 	so in this case it has to be made git rm --cached fileName to untrack it as well.
+
+viewing git commits... in diff ways with filters:
+git log : -show all the commits from recent till very beginning ...shows commit member name and email along with date and time of commit and commit message.
+	-Does not show all the details i.e all the differences of commit from previous one.
+git log -p : shows all the commit along with all the details i.e differences of commit from previous commit. This is very much detailed and comprehensive info about commits.
+git log -p -3 : here -3 can be any no....show only previous 3 commits along with all its details just like git log -p. ...but shows only given no. of previous commits.
+git log --stat : shows all the commits in very much well organised with its differences with previous commits
+	...and shows the details in very much short manner i.e which files were edited and how much edited.
+git log --pretty=oneline : shows all the commits in only one line info...shows only commit id and commit message.
+git log --pretty=short : shows commits in litte short ...i.e shows author name and commit message.
+git log --pretty=full : shows commits just like short but also shows commiter name ...i.e show author and committer name along with commit message.
+More Filters:
+git log --since=2.days : shows only last two days commits or any no. of given days accordingly...shows author name , date n time and commit message.
+git log --since=2.weeks : same as above ...but of weeks.
+git log --since=2.months : same as above ...but of months.
+git log --since=2.years : same as above ...but of years.
+git log --pretty=format:"%h -- %an" :shows the commit info in this format. Here 'h' is id of commit maybe! and 'an' is author name.
+git log --pretty=format:"%h -- %ae" :Here 'an' is author email.
+*There is lot more with above format ...can google*
+
+changing git commits:
+git commit --amend : After this one editor will be opened which contains info about previous commit and can edit that commit with new commit message and some more changes.
+	All the new changes/modifications which were made and staged after previous commit will alos be added to previous commit and 
+	a single commit is made includes changes from previous commit and recent changes.
+
+
+
+
