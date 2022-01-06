@@ -41,7 +41,9 @@ git config user.email : shows email of user.
 git init : makes the current folder as git tracking directory i.e any changes in that folder will be tracked.
 git status : shows how many files are not tracked uptodate..which files has been modified , which files has been send to staging area. 
 	and in general how changes are uptotime.
-git add --a : adds all the files to the staging area, to be commited.
+git add --a : stages All...i.e adds all the files to the staging area, to be commited...i.e stages everything to be saged.
+git add . : stages new and modified, without deleted files...does not stage deleted files.
+git add -u : stages modified and deleted,without new files...stages deleted files but not new files.
 git add anynameoffile : adds particular file to staging area.
 git commit --m "anymessage" : commits the changes and saves it along with message.
 git log : show all the versions of the folder uptodate.
@@ -59,9 +61,13 @@ git rm --cached filename : if particular file was tracked before and now u add i
  not removed from git depository...if it has history which takes lots of space then that causes problem ..so this commands deletes the history of that 
 	file being added in .gitignore.
 
-git diff : shows difference between staged files and modified files.
+git diff : (works for modified files)...shows difference between staged same files and modified same files...
+	...if there is no staged files but only modified files then it shows diff btw that modified files and previous commited same files.
+git dif fileName : shows diff of that particular modified file....with same staged file or same previous commited file.
 
-git diff --staged : shows difference between staged files and previous committed files.
+git diff --staged : (works for staged files)shows difference between staged files and previous committed files..
+git dii --staged fileName : shows diff of that prticular staged file with previous commitedsame file.
+
 
 git commit -a -m "anyMessage" : skips the stagging area...i,e u can simply commit modifed files without stagging it ..i.e without running git add command.
 	untracked files do not get committed here...for that u have to add that particular untracked file..and then commit...i.e run git add command to stage and then commit.
