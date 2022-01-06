@@ -111,6 +111,7 @@ git restore --staged fileName : "unstages"...i.e when a file is staged it can be
 git restore filename : "unmodifies"...i.e particular modified file will be unmodified according to previous commit.
 git checkout -- fileName : "unmodifies"...i.e when a file is modified after a commit then u can unmodify that file and make it as it was in previous commit by this command.
 	but when something is staged then this command doesnt make any changes to that file.
+	vim editor : i to insert text into it....esc to go to last line and then at last line ':' and 'wq' and enter key to exit..
 git checkout -- .gitignore : .gitignore also gets efficted by this ....just wrote it to know the thing.
 git checkout -f : All the files modified will be unmodified and make it as it was in the previous commit...
 	This is dangerous because all the changes to the files made will be deleted if run this command. 
